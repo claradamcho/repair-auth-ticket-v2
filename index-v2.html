@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="chi" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Accessibility Form Test </title>
+  <link rel="stylesheet" href="https://lib.lumen.com/chi/5.49.0/chi-portal.css"
+    integrity="sha256-mt8+1TJHdfcqh7WSbZsS9cPdHLrlhL6bb9PcTE86j9s=" crossorigin="anonymous">
+  <script src="https://lib.lumen.com/chi/5.49.0/js/chi.js"
+    integrity="sha256-jYYapuaLX11aGv5Jm+7xn1Ncov6u4lyd4rPHyC17QRA=" crossorigin="anonymous"></script>
+  <script type="module" src="https://lib.lumen.com/chi/5.51.0/js/ce/ux-chi-ce/ux-chi-ce.esm.js" integrity="sha256-Zy174eQo8twaXCJxeDz4cVyds53LgqSkax2ffPhWk38=" crossorigin="anonymous"></script><script nomodule="" src="https://lib.lumen.com/chi/5.51.0/js/ce/ux-chi-ce/ux-chi-ce.js" integrity="sha256-x01ugGgDsAheg2KClK4AFbKx2LGTM45Vj7tbOSA0yyQ=" crossorigin="anonymous"></script>
+</head>
+
+<body class="-bg--info-light">
+  <!-- Start of Section -->
+  <section class="-p--6">
+    <div class="chi-grid -bg--info-white">
+      <div class="chi-col -w--2"></div>
+      <!-- Start of Content -->
+      <div class="chi-col -w--8 -p--6 -bg--white">
+        <!-- Start of E-Panel -->
+        <div class="chi-epanel -state-icon -done" data-chi-epanel-group="example__base">
+          <div class="chi-epanel__header">
+            <i class="chi-icon -icon--success icon-circle-check -sm--2 -state"></i>
+            <div class="chi-epanel__number">1.</div>
+            <div class="chi-epanel__title">Service</div>
+            <div class="chi-epanel__content">
+              <div class="chi-epanel__collapse">
+                <div class="-done--only">
+                  FRO2006586380, IP VPN, 910 Denver, 910 15TH ST, DENVER, CO, 80202-2912
+                </div>
+              </div>
+            </div>
+            <div class="chi-epanel__action -done--only">
+              <button class="chi-button -primary -flat" data-chi-epanel-action="active">Change</button>
+            </div>
+          </div>
+          <div class="chi-epanel__collapse">
+            <div class="-active--only">
+              <div class="chi-epanel__body">
+                <div class="chi-epanel__content">
+                  <div class="chi-epanel__subtitle">Optional subtitle</div>
+                  <p class="chi-epanel__text">Content in expansion panel (e.g. a form to select a product package)</p>
+                </div>
+                <div class="chi-epanel__footer -justify-content--end">
+                  <button class="chi-button -primary" data-chi-epanel-action="next">Continue</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chi-epanel -active" data-chi-epanel-group="example__base">
+          <div class="chi-epanel__header">
+            <div class="chi-epanel__number">2.</div>
+            <div class="chi-epanel__title">Repair Information</div>
+            <div class="chi-epanel__content">
+              <div class="chi-epanel__collapse">
+                <div class="-done--only">
+                  Use this area to present
+                  a read-only summary of what the user
+                  entered or selected in step 2.
+                  (e.g.) shipping address
+                </div>
+              </div>
+            </div>
+            <div class="chi-epanel__action -done--only">
+              <button class="chi-button -primary -flat" data-chi-epanel-action="active">Change</button>
+            </div>
+          </div>
+          <div class="chi-epanel__collapse">
+            <div class="-active--only">
+              <div class="chi-epanel__body">
+                <div class="chi-epanel__content">
+                 
+                <!-- Dropdown -->
+                <div class="chi-form__item">
+                    <label class="chi-label" for="issue-type">
+                    What issue is occurring?
+                    <abbr class="chi-label__required" aria-label="Required field" title="Required">*</abbr>
+                    </label>
+                    <div class="chi-dropdown -fluid">
+                    <button id="issue-type" class="chi-button -fluid chi-dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-controls="issue-type-menu" aria-required="true">
+                        Select
+                    </button>
+                    <div class="chi-dropdown__menu" id="issue-type-menu">
+                        <a class="chi-dropdown__menu-item" href="#">Line or Circuit Down</a>
+                        <a class="chi-dropdown__menu-item" href="#">Line or Circuit Errors</a>
+                        <a class="chi-dropdown__menu-item" href="#">Network Interface Down</a>
+                    </div>
+                    </div>
+                </div><!-- EO Dropdown -->
+
+                <!-- Text Area -->
+                <div class="chi-form__item -mt--3">
+                    <label class="chi-label" for="issue-details">
+                    Issue Details (any attachments can be added in Attachments section below)
+                    <abbr class="chi-label__required" aria-label="Required field" title="Required">*</abbr>
+                    </label>
+                    <textarea class="chi-input" id="issue-details" required aria-required="true" aria-labelledby="label-issue-details"></textarea>
+                </div> <!-- EO Text Area -->
+  
+
+                  <div class="chi-grid">
+                    <div class="chi-col -w--12 -w-lg--6">
+                      <!-- Text Input -->
+                      <div class="chi-form__item -mt--3">
+                          <label class="chi-label" for="business-impact">
+                          What is the impact to your business?
+                          <abbr class="chi-label__required" aria-label="Required field" title="Required">*</abbr>
+                          </label>
+                          <input type="text" class="chi-input" id="business-impact" required aria-required="true">
+                      </div><!-- EO Text Input -->
+                    </div>
+                    <div class="chi-col -w--12 -w-lg--6">
+                    <!-- Checkbox -->
+                    <fieldset class="-mt--3">
+                      <legend class="chi-label -mt--3">
+                        Severity
+                        <abbr class="chi-label__required" aria-label="Required field" title="Required">*</abbr>
+                      </legend>
+                      <!-- Grouping checkboxes implies at least one must be checked; not individually required -->
+                      <div class="chi-form__item">
+                        <div class="chi-checkbox">
+                          <input type="checkbox" class="chi-checkbox__input" id="severe" name="severity">
+                          <label class="chi-checkbox__label" for="severe">Severe</label>
+                        </div>
+                      </div>
+                      <div class="chi-form__item">
+                        <div class="chi-checkbox">
+                          <input type="checkbox" class="chi-checkbox__input" id="high" name="severity">
+                          <label class="chi-checkbox__label" for="high">High</label>
+                        </div>
+                      </div>
+                      <div class="chi-form__item">
+                        <div class="chi-checkbox">
+                          <input type="checkbox" class="chi-checkbox__input" id="medium" name="severity">
+                          <label class="chi-checkbox__label" for="medium">Medium</label>
+                        </div>
+                      </div>
+                      <div class="chi-form__item">
+                        <div class="chi-checkbox">
+                          <input type="checkbox" class="chi-checkbox__input" id="low" name="severity">
+                          <label class="chi-checkbox__label" for="low">Low</label>
+                        </div>
+                      </div>
+                    </fieldset><!-- EO Checkbox -->
+                    </div>
+                  </div><!-- EO Grid Checkbox -->
+
+                  <!-- Radio button -->
+                  <fieldset class="-mt--3">
+                    <legend class="chi-label">
+                      Has the operation of local equipment been validated?
+                      <abbr class="chi-label__required" aria-label="Required field" title="Required">*</abbr>
+                    </legend>
+                    <div class="chi-form__item -inline">
+                      <div class="chi-radio">
+                        <input class="chi-radio__input" type="radio" name="radios" id="radio-ba1" required>
+                        <label class="chi-radio__label" for="radio-ba1">Yes</label>
+                      </div>
+                    </div>
+                    <div class="chi-form__item -inline">
+                      <div class="chi-radio">
+                        <input class="chi-radio__input" type="radio" name="radios" id="radio-ba2" required>
+                        <label class="chi-radio__label" for="radio-ba2">No</label>
+                      </div>
+                    </div>
+                  </fieldset><!-- EO Radio button -->
+
+
+                  <!-- Date Picker -->
+                  <label class="chi-label -mt--3" for="problem-start">
+                    When did the problem start?
+                    <abbr class="chi-label__required" aria-label="Required field" title="Required">*</abbr>
+                  </label>
+                  <div class="chi-grid">
+                    <div class="chi-col -w--12 -w-lg--6">
+                      <div class="chi-form__item">
+                        <label class="chi-label" for="problem-start">Date
+                          <abbr class="chi-label__required" aria-label="Required field" title="Required">*</abbr>
+                        </label>
+                        <div class="chi-input__wrapper -icon--right">
+                          <input id="problem-start" type="text" class="chi-input" placeholder="MM/DD/YYYY" required aria-label="Date when the problem started">
+                          <i class="chi-icon icon-date" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div> <!-- EO Date Picker -->
+
+                  <!-- Search Dropdown -->
+                  <div class="chi-col -w--12 -w-lg--6">
+                    <label class="chi-label" for="time-zone-dropdown">
+                      Time Zone
+                      <abbr class="chi-label__required" aria-label="Required field" title="Required">*</abbr>
+                    </label>
+                    <div class="chi-dropdown -fluid">
+                      <button id="time-zone-dropdown" class="chi-button chi-dropdown__trigger -fluid" aria-haspopup="true" aria-expanded="false" aria-controls="time-zone-menu" aria-required="true">
+                        Select
+                      </button>
+                      <div class="chi-dropdown__menu" id="time-zone-menu">
+                        <div class="chi-dropdown__menu-header -mb--1">
+                          <div class="chi-input__wrapper -icon--right">
+                            <input class="chi-input chi-search__input -sm" type="search" placeholder="Search Time Zone" aria-label="Search Time Zone">
+                            <button class="chi-button -icon -flat -sm -bg--none" aria-label="Search Time Zone Button">
+                              <i class="chi-icon icon-search" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="chi-dropdown__menu-items-wrapper" style="overflow-y: auto; max-height: 7rem">
+                          <a class="chi-dropdown__menu-item" href="#">Item 1</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 2</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 3</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 4</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 5</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 6</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 7</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 8</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 9</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 10</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 11</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 12</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 13</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 14</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 15</a>
+                          <a class="chi-dropdown__menu-item" href="#">Item 16</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- EO Search Dropdown -->
+
+                  </div><!-- EO of grid -->
+
+                  <!-- Picker Group -->
+                  <div class="chi-grid">
+                    <div class="chi-col -w--12 -mt--3">
+                      <fieldset>
+                        <legend class="chi-label">Problem Status
+                          <abbr class="chi-label__required" aria-label="Required field">*</abbr>
+                        </legend>
+                        <div class="chi-picker-group">
+                          <div class="chi-picker-group__content">
+                            <input class="chi-picker__input" type="radio" name="unique-name-ch" id="unique-id-ch1" checked>
+                            <label for="unique-id-ch1">Still Ocurring</label>
+                            <input class="chi-picker__input" type="radio" name="unique-name-ch" id="unique-id-ch2">
+                            <label for="unique-id-ch2">Problem is Over</label>
+                          </div>
+                        </div>
+                      </fieldset> 
+                    </div>
+                  </div><!-- EO Picker Group -->
+                </div>
+                <div class="chi-epanel__footer -justify-content--end">
+                  <button class="chi-button" data-chi-epanel-action="previous">Previous</button>
+                  <button class="chi-button -primary" data-chi-epanel-action="next">Continue</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chi-epanel" data-chi-epanel-group="example__base">
+          <div class="chi-epanel__header">
+            <div class="chi-epanel__number">3.</div>
+            <div class="chi-epanel__title">Authorization</div>
+            <div class="chi-epanel__content">
+              <div class="chi-epanel__collapse">
+                <div class="-done--only">
+                  Use this area to present
+                  a read-only summary of what the user
+                  entered or selected in step 3.
+                  (e.g.) installation date
+                </div>
+              </div>
+            </div>
+            <div class="chi-epanel__action -done--only">
+              <button class="chi-button -primary -flat" data-chi-epanel-action="active">Change</button>
+            </div>
+          </div>
+          <div class="chi-epanel__collapse">
+            <div class="-active--only">
+              <div class="chi-epanel__body">
+                <div class="chi-epanel__content">
+                      <!-- Dropdown -->
+       
+        <!-- Text Input -->
+        <div class="chi-grid">
+          <div class="chi-col -w--12 -w-lg--6">
+            <div class="chi-form__item">
+              <label class="chi-label" for="technician">Technician
+                <abbr class="chi-label__required" aria-label="Required field">*</abbr>
+              </label>
+              <div class="chi-dropdown -fluid">
+                <button id="technician" class="chi-button -fluid chi-dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-labelledby="technician">Select</button>
+                <div class="chi-dropdown__menu">
+                  <!-- Dropdown items go here -->
+                    <a class="chi-dropdown__menu-item" href="#">John Doe</a>
+                    <a class="chi-dropdown__menu-item" href="#">Elisabeth Rusell</a>
+                    <a class="chi-dropdown__menu-item" href="#">Sally Smith</a>
+                    <a class="chi-dropdown__menu-item" href="#">Mike Jones</a>
+                </div>
+              </div>
+            </div><!-- EO Text Input -->
+          </div>
+          <div class="chi-col -w--6 -w-lg--6">
+            <!-- Number Input -->
+            <div class="chi-form__item">
+              <label class="chi-label" for="number-of-service">Number of Service IDs</label>
+              <div class="chi-number-input">
+                <input id="number-of-service" type="number" class="chi-input" value="0" aria-label="Input Label">
+                <button aria-label="Decrease"></button>
+                <button aria-label="Increase"></button>
+              </div>
+            </div><!-- EO Number Input  -->
+          </div>
+        </div><!-- EO Grid Checkbox -->
+
+        <!-- Phone Input WEBCOMPONENT  -->
+        <chi-label for="phone-input-base" class="-mt--3">Phone Number</chi-label>
+        <chi-phone-input id="phone-input-base"></chi-phone-input><!-- EO Phone Input -->
+
+        <!-- Date Picker -->
+        <div class="chi-grid">
+          <div class="chi-col -w--12 -w-lg--6 -mt--3">
+            <chi-label required for="example__base">Best Time to Call Technician</chi-label>
+            <chi-time-picker id="example__base"></chi-time-picker>
+          </div> <!-- EO Date Picker -->
+
+          <!-- Search Dropdown -->
+          <div class="chi-col -w--12 -w-lg--6 -mt--3">
+            <label class="chi-label" for="time-zone">
+              Weekday Only Availability
+              <abbr class="chi-label__required" aria-label="Required field">*</abbr>
+            </label>
+            <div class="chi-form__item">
+              <label class="chi-switch" for="availability">
+                <input type="checkbox" class="chi-switch__input" id="availability" checked aria-required="true">
+                <span class="chi-switch__content">
+                  <span class="chi-switch__thumb"></span>
+                </span>
+                <span class="chi-switch__label">On</span>
+              </label>
+            </div>
+          </div> <!-- EO Search Dropdown -->
+        </div><!-- EO of grid -->
+
+          </div>
+          <div class="chi-epanel__footer -justify-content--end">
+            <button class="chi-button" data-chi-epanel-action="previous">Previous</button>
+            <button class="chi-button -primary" data-chi-epanel-action="next">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="chi-epanel" data-chi-epanel-group="example__base">
+      <div class="chi-epanel__header">
+        <div class="chi-epanel__number">4.</div>
+        <div class="chi-epanel__title">Panel title</div>
+        <div class="chi-epanel__content">
+          <div class="chi-epanel__collapse">
+            <div class="-done--only">
+              Use this area to present
+              a read-only summary of what the user
+              entered or selected in step 4.
+              (e.g.) payment method
+            </div>
+          </div>
+        </div>
+        <div class="chi-epanel__action -done--only">
+          <button class="chi-button -primary -flat" data-chi-epanel-action="active">Change</button>
+        </div>
+      </div>
+      <div class="chi-epanel__collapse">
+        <div class="-active--only">
+          <div class="chi-epanel__body">
+            <div class="chi-epanel__content">
+              <div class="chi-epanel__subtitle">Optional subtitle</div>
+              <p class="chi-epanel__text">Content in expansion panel (e.g. a form to enter payment method)</p>
+            </div>
+            <div class="chi-epanel__footer -justify-content--end">
+              <button class="chi-button" data-chi-epanel-action="previous">Previous</button>
+              <button class="chi-button -primary" data-chi-epanel-action="done">Finish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End of E-Panel -->
+
+      <div class="chi-col -w--2"></div>
+    </div><!-- End of grid -->
+  </section><!-- End of Section -->
+
+  <!-- JavaScript -->
+  <script>chi.expansionPanel(document.querySelectorAll('[data-chi-epanel-group="example__base"]'));</script>
+  <script>chi.dropdown(document.getElementById('issue-type'));</script>
+  <script>chi.dropdown(document.getElementById('time-zone-dropdown'));</script>
+  <script>chi.dropdown(document.getElementById('technician'));</script>
+  <script>chi.datePicker(document.getElementById('problem-start'));</script>
+  <script>chi.dropdown(document.getElementById('time-zone'));</script>
+  <script>chi.dropdown(document.getElementById('time-zone'));</script>
+  
+</body>
+</html>
