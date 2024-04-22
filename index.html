@@ -280,56 +280,60 @@
             <div class="-active--only">
               <div class="chi-epanel__body">
                 <div class="chi-epanel__content">
-                      <!-- Dropdown -->
        
-        <!-- Text Input -->
+       
+        <!-- Dropdown -->
         <div class="chi-grid">
           <div class="chi-col -w--12 -w-lg--6">
             <div class="chi-form__item">
-              <label class="chi-label" for="technician">Technician
-                <abbr class="chi-label__required" aria-label="Required field">*</abbr>
+              <label class="chi-label" for="technician-dropdown">
+                Technician
+                <abbr class="chi-label__required" aria-label="Required field" title="Required">*</abbr>
               </label>
               <div class="chi-dropdown -fluid">
-                <button id="technician" class="chi-button -fluid chi-dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-labelledby="technician">Select</button>
-                <div class="chi-dropdown__menu">
-                  <!-- Dropdown items go here -->
-                    <a class="chi-dropdown__menu-item" href="#">John Doe</a>
-                    <a class="chi-dropdown__menu-item" href="#">Elisabeth Rusell</a>
-                    <a class="chi-dropdown__menu-item" href="#">Sally Smith</a>
-                    <a class="chi-dropdown__menu-item" href="#">Mike Jones</a>
+                <button id="technician-dropdown" class="chi-button -fluid chi-dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-controls="technician-menu" aria-required="true">
+                  Select
+                </button>
+                <div class="chi-dropdown__menu" id="technician-menu">
+                  <a class="chi-dropdown__menu-item" href="#">John Doe</a>
+                  <a class="chi-dropdown__menu-item" href="#">Elisabeth Rusell</a>
+                  <a class="chi-dropdown__menu-item" href="#">Sally Smith</a>
+                  <a class="chi-dropdown__menu-item" href="#">Mike Jones</a>
                 </div>
               </div>
-            </div><!-- EO Text Input -->
+            </div><!-- EO Dropdown -->
           </div>
           <div class="chi-col -w--6 -w-lg--6">
+            
             <!-- Number Input -->
             <div class="chi-form__item">
               <label class="chi-label" for="number-of-service">Number of Service IDs</label>
               <div class="chi-number-input">
-                <input id="number-of-service" type="number" class="chi-input" value="0" aria-label="Input Label">
+                <input id="number-of-service" type="number" class="chi-input" value="0" aria-label="Number of Service IDs" aria-describedby="numberHelp">
                 <button aria-label="Decrease"></button>
                 <button aria-label="Increase"></button>
               </div>
-            </div><!-- EO Number Input  -->
+            </div><!-- EO Number Input -->
           </div>
         </div><!-- EO Grid Checkbox -->
 
+       
         <!-- Phone Input WEBCOMPONENT  -->
         <chi-label for="phone-input-base" class="-mt--3">Phone Number</chi-label>
         <chi-phone-input id="phone-input-base"></chi-phone-input><!-- EO Phone Input -->
 
-        <!-- Date Picker -->
         <div class="chi-grid">
+           <!-- Date Picker -->
           <div class="chi-col -w--12 -w-lg--6 -mt--3">
-            <chi-label required for="example__base">Best Time to Call Technician</chi-label>
-            <chi-time-picker id="example__base"></chi-time-picker>
+            <label id="timePickerLabel" for="example__base">Best Time to Call Technician</label>
+            <chi-time-picker id="example__base" aria-labelledby="timePickerLabel" aria-required="true"></chi-time-picker>
           </div> <!-- EO Date Picker -->
 
-          <!-- Search Dropdown -->
+          <!-- Toggle Switch -->
           <div class="chi-col -w--12 -w-lg--6 -mt--3">
             <label class="chi-label" for="time-zone">
               Weekday Only Availability
-              <abbr class="chi-label__required" aria-label="Required field">*</abbr>
+              <abbr class="chi-label__required" aria-label="Required field" title="Required">*</abbr>
             </label>
             <div class="chi-form__item">
               <label class="chi-switch" for="availability">
@@ -340,7 +344,7 @@
                 <span class="chi-switch__label">On</span>
               </label>
             </div>
-          </div> <!-- EO Search Dropdown -->
+          </div> <!-- EO Toggle Switch -->
         </div><!-- EO of grid -->
 
           </div>
@@ -394,10 +398,11 @@
   <script>chi.expansionPanel(document.querySelectorAll('[data-chi-epanel-group="example__base"]'));</script>
   <script>chi.dropdown(document.getElementById('issue-type'));</script>
   <script>chi.dropdown(document.getElementById('time-zone-dropdown'));</script>
-  <script>chi.dropdown(document.getElementById('technician'));</script>
+  <script>chi.dropdown(document.getElementById('technician-dropdown'));</script>
   <script>chi.datePicker(document.getElementById('problem-start'));</script>
   <script>chi.dropdown(document.getElementById('time-zone'));</script>
   <script>chi.dropdown(document.getElementById('time-zone'));</script>
+  <script>chi.numberInput(document.getElementById('number-of-service'));</script>
   
 </body>
 </html>
